@@ -23,7 +23,7 @@
 		flex: 1;
 
 		@media (max-width: $mobile) {
-			font-size: 20px;
+			font-size: adaptive(20, 28);
 			text-align: center;
 		}
 	}
@@ -46,11 +46,11 @@
 		@media (max-width: $mobile) {
 			width: 100%;
 			order: 2;
-			height: 40px;
-			font-size: 13px;
-			padding-left: 45px;
+			height: adaptive(40, 50);
+			font-size: adaptive(13, 15);
+			padding: 0 adaptive(20, 43) 0 adaptive(45, 60);
 			background-position: center left 20px;
-			background-size: 16px;
+			background-size: adaptive(16, 20);
 		}
 	}
 
@@ -80,8 +80,8 @@
 		position: relative;
 
 		@media (max-width: $mobile) {
-			width: 35px;
-			height: 35px;
+			width: adaptive(35, 50);
+			height: adaptive(35, 50);
 		}
 	}
 

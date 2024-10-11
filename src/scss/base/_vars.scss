@@ -19,3 +19,11 @@ $mobile: 767px; // media max-width для мобильных
 $text-size: 16px; // размер основного текста
 $text-color: #000000; // цвет текста на сайте
 $background-color: #f6f7fb; // цвет фона на сайте
+
+$max-width: 768; // максимальная ширина для вычисления adaptive
+$min-width: 375; // минимальная ширина для вычисления adaptive
+
+// функция для адаптивного изменения размеров от max до min на разрешении от max-width до min-width
+@function adaptive($min, $max) {
+	@return clamp(#{$min}px, #{$min}px + (#{$max} - #{$min}) * ((100vw - #{$min-width}px) / ($max-width - $min-width)), #{$max}px);
+}

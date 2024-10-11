@@ -70,9 +70,9 @@ svg {
 	font-size: 18px;
 
 	@media (max-width: $mobile) {
-		font-size: 15px;
-		height: 40px;
-		border-radius: 10px;
+		font-size: adaptive(15, 18);
+		height: adaptive(40, 50);
+		border-radius: adaptive(10, 15);
 	}
 	
 	&:hover {

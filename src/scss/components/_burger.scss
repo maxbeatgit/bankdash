@@ -5,7 +5,7 @@ $burger-width: 28px;
 $burger-height: 24px;
 $burger-bg: none;
 $burger-color: $second-color;
-$burger-line-width: 2px;
+$burger-line-width: 3px;
 $burger-line-radius: 50px;
 
 .burger {
@@ -27,8 +27,8 @@ $burger-line-radius: 50px;
 		position: relative;
 
 		@media (max-width: $mobile) {
-			width: 18px;
-			height: 14px;
+			width: adaptive(18, 28);
+			height: adaptive(14, 24);
 		}
 	}
 	&__line {
@@ -41,6 +41,10 @@ $burger-line-radius: 50px;
 		transition-duration: 0.2s;
 		transition-property: transform, top, bottom, opacity;
 		transition-delay: 0s, 0.1s, 0.1s, 0s;
+
+		@media (max-width: $mobile) {
+			height: adaptive(2, 3);
+		}
 		
 		&_1 {top: 0;}
 		&_2 {top: 50%; transform: translateY(-50%);}

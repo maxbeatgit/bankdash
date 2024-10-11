@@ -243,9 +243,9 @@ svg {
 }
 @media (max-width: 767px) {
 	.button {
-		font-size: 15px;
-		height: 40px;
-		border-radius: 10px;
+		font-size: clamp(15px, 15px + (18 - 15) * (100vw - 375px) / 393, 18px);
+		height: clamp(40px, 40px + (50 - 40) * (100vw - 375px) / 393, 50px);
+		border-radius: clamp(10px, 10px + (15 - 10) * (100vw - 375px) / 393, 15px);
 	}
 }
 .button:hover {
@@ -280,14 +280,14 @@ svg {
 }
 @media (max-width: 767px) {
 	.burger__icon {
-		width: 18px;
-		height: 14px;
+		width: clamp(18px, 18px + (28 - 18) * (100vw - 375px) / 393, 28px);
+		height: clamp(14px, 14px + (24 - 14) * (100vw - 375px) / 393, 24px);
 	}
 }
 .burger__line {
 	display: block;
 	background: #343c6a;
-	height: 2px;
+	height: 3px;
 	border-radius: 50px;
 	position: absolute;
 	width: 100%;
@@ -299,6 +299,11 @@ svg {
 	transition-property: transform, top, bottom, opacity, -webkit-transform;
 	-webkit-transition-delay: 0s, 0.1s, 0.1s, 0s;
 	transition-delay: 0s, 0.1s, 0.1s, 0s;
+}
+@media (max-width: 767px) {
+	.burger__line {
+		height: clamp(2px, 2px + (3 - 2) * (100vw - 375px) / 393, 3px);
+	}
 }
 .burger__line_1 {
 	top: 0;
@@ -323,8 +328,8 @@ svg {
 }
 @media (max-width: 767px) {
 	.form__label {
-		font-size: 13px;
-		margin-bottom: 9px;
+		font-size: clamp(13px, 13px + (16 - 13) * (100vw - 375px) / 393, 16px);
+		margin-bottom: clamp(9px, 9px + (11 - 9) * (100vw - 375px) / 393, 11px);
 	}
 }
 .form__input {
@@ -365,10 +370,10 @@ svg {
 }
 @media (max-width: 767px) {
 	.form__input {
-		font-size: 12px;
-		height: 40px;
-		border-radius: 10px;
-		padding: 0 15px;
+		font-size: clamp(12px, 12px + (15 - 12) * (100vw - 375px) / 393, 15px);
+		height: clamp(40px, 40px + (50 - 40) * (100vw - 375px) / 393, 50px);
+		border-radius: clamp(10px, 10px + (15 - 10) * (100vw - 375px) / 393, 15px);
+		padding: 0 clamp(15px, 15px + (20 - 15) * (100vw - 375px) / 393, 20px);
 	}
 }
 .form__input_date {
@@ -377,7 +382,7 @@ svg {
 @media (max-width: 767px) {
 	.form__input_date {
 		background-position: center right 17px;
-		background-size: 10px;
+		background-size: clamp(10px, 10px + (12 - 10) * (100vw - 375px) / 393, 12px);
 	}
 }
 
@@ -439,7 +444,7 @@ svg {
 }
 @media (max-width: 767px) {
 	.header__title {
-		font-size: 20px;
+		font-size: clamp(20px, 20px + (28 - 20) * (100vw - 375px) / 393, 28px);
 		text-align: center;
 	}
 }
@@ -475,11 +480,11 @@ svg {
 		-webkit-box-ordinal-group: 3;
 		-ms-flex-order: 2;
 		order: 2;
-		height: 40px;
-		font-size: 13px;
-		padding-left: 45px;
+		height: clamp(40px, 40px + (50 - 40) * (100vw - 375px) / 393, 50px);
+		font-size: clamp(13px, 13px + (15 - 13) * (100vw - 375px) / 393, 15px);
+		padding: 0 clamp(20px, 20px + (43 - 20) * (100vw - 375px) / 393, 43px) 0 clamp(45px, 45px + (60 - 45) * (100vw - 375px) / 393, 60px);
 		background-position: center left 20px;
-		background-size: 16px;
+		background-size: clamp(16px, 16px + (20 - 16) * (100vw - 375px) / 393, 20px);
 	}
 }
 .header__button {
@@ -508,8 +513,8 @@ svg {
 }
 @media (max-width: 767px) {
 	.header__user {
-		width: 35px;
-		height: 35px;
+		width: clamp(35px, 35px + (50 - 35) * (100vw - 375px) / 393, 50px);
+		height: clamp(35px, 35px + (50 - 35) * (100vw - 375px) / 393, 50px);
 	}
 }
 
@@ -648,7 +653,8 @@ svg {
 }
 @media (max-width: 767px) {
 	.setting {
-		padding: 20px;
+		padding: clamp(20px, 20px + (30 - 20) * (100vw - 375px) / 393, 30px);
+		border-radius: clamp(15px, 15px + (25 - 15) * (100vw - 375px) / 393, 25px);
 	}
 }
 .setting__nav {
@@ -661,7 +667,7 @@ svg {
 }
 @media (max-width: 767px) {
 	.setting__nav {
-		gap: 30px;
+		gap: clamp(28px, 28px + (40 - 28) * (100vw - 375px) / 393, 40px);
 		margin-bottom: 25px;
 		overflow-x: auto;
 	}
@@ -674,8 +680,9 @@ svg {
 }
 @media (max-width: 767px) {
 	.setting__nav-link {
-		font-size: 13px;
-		padding: 8px 6px;
+		font-size: clamp(13px, 13px + (16 - 13) * (100vw - 375px) / 393, 16px);
+		padding: clamp(8px, 8px + (10 - 8) * (100vw - 375px) / 393, 10px) clamp(6px, 6px + (15 - 6) * (100vw - 375px) / 393, 15px);
+		padding-top: 2px;
 	}
 }
 .setting__nav-link::before {

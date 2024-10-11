@@ -10,8 +10,8 @@
 		margin-bottom: 11px;
 
 		@media (max-width: $mobile) {
-			font-size: 13px;
-			margin-bottom: 9px;
+			font-size: adaptive(13, 16);
+			margin-bottom: adaptive(9, 11);
 		}
 	}
 
@@ -40,10 +40,10 @@
 		}
 
 		@media (max-width: $mobile) {
-			font-size: 12px;
-			height: 40px;
-			border-radius: 10px;
-			padding: 0 15px;
+			font-size: adaptive(12, 15);
+			height: adaptive(40, 50);
+			border-radius: adaptive(10, 15);
+			padding: 0 adaptive(15, 20);
 		}
 
 		&_date {
@@ -51,7 +51,7 @@
 
 			@media (max-width: $mobile) {
 				background-position: center right 17px;
-				background-size: 10px;
+				background-size: adaptive(10, 12);
 			}
 		}
 	}
