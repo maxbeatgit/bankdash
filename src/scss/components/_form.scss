@@ -82,3 +82,6 @@
 		border-color: $main-color;
 	}
 }
+::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}

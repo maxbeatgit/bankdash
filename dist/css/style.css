@@ -409,6 +409,10 @@ svg {
 	border-color: #1814F3;
 }
 
+::-webkit-calendar-picker-indicator {
+	opacity: 0;
+}
+
 /* Header */
 .header {
 	height: 100px;
