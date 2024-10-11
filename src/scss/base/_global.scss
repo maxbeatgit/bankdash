@@ -11,6 +11,7 @@ body {
 
 .main {
 	flex: 1;
+	overflow: hidden;
 }
 .main__body {
 	padding: 30px 40px;
@@ -24,13 +25,6 @@ body {
 	@extend %container;
 }
 
-.title {
-	font-weight: 600;
-	font-size: $title-size;
-	display: block;
-	margin-bottom: 1em;
-}
-
 a {
 	color: $main-color;
 	&:hover {
@@ -39,10 +33,6 @@ a {
 }
 a, a:before, a > *, button {
 	transition: 0.3s;
-}
-
-p:not(:last-child) {
-	margin-bottom: 1em;
 }
 
 svg {

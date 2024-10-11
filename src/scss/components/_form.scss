@@ -23,11 +23,24 @@
 		width: 100%;
 		padding: 0 20px;
 
+		&::placeholder {
+			color: $mediumblue;
+		}
+
 		@media (max-width: $mobile) {
 			font-size: 12px;
 			height: 40px;
 			border-radius: 10px;
 			padding: 0 15px;
+		}
+
+		&_date {
+			background: url(../img/icons/arrow-down.svg) center right 20px / 12px no-repeat;
+
+			@media (max-width: $mobile) {
+				background-position: center right 17px;
+				background-size: 10px;
+			}
 		}
 	}
 }
