@@ -336,6 +336,8 @@ svg {
 	height: 50px;
 	width: 100%;
 	padding: 0 20px;
+	-webkit-transition: border-color 0.3s;
+	transition: border-color 0.3s;
 }
 .form__input::-webkit-input-placeholder {
 	color: #8ba3cb;
@@ -351,6 +353,15 @@ svg {
 }
 .form__input::placeholder {
 	color: #8ba3cb;
+}
+.form__input:hover {
+	border-color: rgb(204.5, 222.68, 234.8);
+}
+.form__input:focus {
+	border-color: #8ba3cb;
+}
+.form__input:user-invalid {
+	border-color: #d51b1b;
 }
 @media (max-width: 767px) {
 	.form__input {
@@ -555,6 +566,9 @@ svg {
 	filter: none;
 	opacity: 1;
 }
+.menu__link_active {
+	cursor: default;
+}
 .menu__icon {
 	-webkit-filter: grayscale(100%);
 	filter: grayscale(100%);
@@ -679,6 +693,9 @@ svg {
 }
 .setting__nav-link:hover::before, .setting__nav-link_active::before {
 	background: #1814F3;
+}
+.setting__nav-link_active {
+	cursor: default;
 }
 .setting__body {
 	display: -webkit-box;

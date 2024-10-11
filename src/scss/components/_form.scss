@@ -24,9 +24,19 @@
 		height: 50px;
 		width: 100%;
 		padding: 0 20px;
+		transition: border-color 0.3s;
 
 		&::placeholder {
 			color: $mediumblue;
+		}
+		&:hover {
+			border-color: darken($border-color, 7%);
+		}
+		&:focus {
+			border-color: $mediumblue;
+		}
+		&:user-invalid {
+			border-color: $red;
 		}
 
 		@media (max-width: $mobile) {

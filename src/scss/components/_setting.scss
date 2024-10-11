@@ -52,6 +52,9 @@
 				background: $main-color;
 			}
 		}
+		&_active {
+			cursor: default;
+		}
 	}
 
 	&__body {
