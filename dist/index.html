@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<title>BankDash.</title>
+		<meta name="description" content="Description">
+		<link rel="shortcut icon" href="img/favicon.svg">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+		<nav class="menu">
+			<button class="menu__close"></button>
+			<a href="/" class="menu__logo"><img src="img/logo.svg" alt=""></a>
+			<div class="menu__links">
+				<a class="menu__link" href="#"><img class="menu__icon" src="img/icons/home.svg" alt="">Dashboard</a>
+				<a class="menu__link" href="#"><img class="menu__icon" src="img/icons/transfer.svg" alt="">Transactions</a>
+				<a class="menu__link" href="#"><img class="menu__icon" src="img/icons/user.svg" alt="">Accounts</a>
+				<a class="menu__link" href="#"><img class="menu__icon" src="img/icons/investment.svg" alt="">Investments</a>
+				<a class="menu__link" href="#"><img class="menu__icon" src="img/icons/credit-card.svg" alt="">Credit Cards</a>
+				<a class="menu__link" href="#"><img class="menu__icon" src="img/icons/loan.svg" alt="">Loans</a>
+				<a class="menu__link" href="#"><img class="menu__icon" src="img/icons/service.svg" alt="">Services</a>
+				<a class="menu__link" href="#"><img class="menu__icon" src="img/icons/econometrics.svg" alt="">My Privileges</a>
+				<a class="menu__link menu__link_active" href="#"><img class="menu__icon" src="img/icons/settings.svg" alt="">Setting</a>
+			</div>
+		</nav>
+		<main class="main">
+			<header class="header">
+				<button class="burger"></button>
+				<h1 class="header__title">Setting</h1>
+				<input class="header__search" type="search" placeholder="Search for something">
+				<button class="header__button"><img src="img/icons/setting.svg" alt=""></button>
+				<button class="header__button"><img src="img/icons/notify.svg" alt=""></button>
+				<a href="#" class="header__user"><picture><source srcset="img/user-photo.webp" type="image/webp"><img class="cover" src="img/user-photo.png" alt=""></picture></a>
+			</header>
+			<div class="main__body">
+				<section class="setting">
+					<div class="setting__nav">
+						<a href="#" class="setting__nav-link setting__nav-link_active">Edit Profile</a>
+						<a href="#" class="setting__nav-link">Preferences</a>
+						<a href="#" class="setting__nav-link">Security</a>
+					</div>
+					<div class="setting__body">
+						<div class="setting__user">
+							<div class="setting__user-photo">
+								<picture>
+									<source srcset="img/user-photo.webp" type="image/webp"><img class="cover" src="img/user-photo.png" alt="">
+								</picture>
+							</div>
+							<button class="setting__user-button"></button>
+						</div>
+						<form class="setting__form form" action="#">
+							<div class="form__field">
+								<label class="form__label">Your Name</label>
+								<input class="form__input" type="text" name="name" placeholder="Your Name" value="Charlene Reed" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">User Name</label>
+								<input class="form__input" type="text" name="username" placeholder="User Name" value="Charlene Reed" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">Email</label>
+								<input class="form__input" type="email" name="email" placeholder="Email" value="charlenereed@gmail.com" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">Password</label>
+								<input class="form__input" type="password" name="password" placeholder="Password" value="frdeg45&" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">Date of Birth</label>
+								<input class="form__input" type="text" name="birth" placeholder="Date of Birth" value="25 January 1990" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">Present Address</label>
+								<input class="form__input" type="text" name="address" placeholder="Present Address" value="San Jose, California, USA" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">Permanent Address</label>
+								<input class="form__input" type="text" name="address2" placeholder="Permanent Address" value="San Jose, California, USA" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">City</label>
+								<input class="form__input" type="text" name="city" placeholder="City" value="San Jose" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">Postal Code</label>
+								<input class="form__input" type="text" name="postalcode" placeholder="Postal Code" value="45962" required>
+							</div>
+							<div class="form__field">
+								<label class="form__label">Country</label>
+								<input class="form__input" type="text" name="Country" placeholder="Country" value="USA" required>
+							</div>
+							<button class="form__button button" type="submit">Save</button>
+						</form>
+					</div>
+				</section>
+			</div>
+		</main>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/script.min.js"></script>
+	</body>
+</html>

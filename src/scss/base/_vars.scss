@@ -1,0 +1,61 @@
+$font-family: 'Inter', sans-serif;
+
+$main-color: #1814F3;
+$second-color: #343c6a;
+$border-color: #e6eff5;
+$border-color-light: #f4f5f7;
+$white: #FFFFFF;
+$black: #000000;
+$lightblack: #232323;
+$blue: #6996F8;
+$darkblue: #2b4785;
+$mediumblue: #8ba3cb;
+$softblue: #718ebf;
+$lightblue: #f6f7fb;
+$gray: #b1b1b1;
+$lightgray: #F8F8F8;
+$darkgray: #999999;
+$red: #EB4D4B;
+$green: #13A456;
+
+$max-width: 1200; // максимальная ширина контентной части по макету вместе с паддингами по бокам
+$min-width: 320; // минимальная ширина контентной части (для вычисления adaptive)
+$mobile-menu: 1199px; // media max-width для мобильного меню
+$mobile: 767px; // media max-width для мобильных
+
+// функция для адаптивного изменения размеров от max до min на разрешении от max-width до min-width
+@function adaptive($min, $max) {
+	@return clamp(#{$min}px, #{$min}px + (#{$max} - #{$min}) * ((100vw - #{$min-width}px) / ($max-width - $min-width)), #{$max}px);
+}
+// min, max для адаптивного изменения размеров
+$section-padding: adaptive(20, 40); // min, max отступы в секциях по бокам
+$section-margin: adaptive(40, 60); // min, max отступ снизу между секциями
+$text-size: adaptive(16, 20); // min, max размер основного текста
+$title-size: adaptive(24, 34); // min, max размер заголовков
+
+// стили для контейнера (используется @extend чтобы стили объединялись)
+%container {
+	width: 100%;
+	max-width: #{$max-width}px;
+	padding: 0 $section-padding;
+	margin: 0 auto;
+	position: relative;
+}
+
+// фоновая подложка для секций на всю ширину экрана
+// применяется к :after c аргументом: @include behind-bg($blue);
+@mixin behind-bg($bg) {
+	@extend %behind-div;
+	background: $bg;
+}
+// эта часть кода служебная, вызывается в миксине через extand, чтобы стили объединялись
+%behind-div {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: calc((100% - 100vw) / 2);
+	right: calc((100% - 100vw) / 2);
+	z-index: -1;
+}

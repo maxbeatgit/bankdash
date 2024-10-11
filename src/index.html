@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<title>BankDash.</title>
+	<meta name="description" content="Description">
+	<link rel="shortcut icon" href="img/favicon.svg">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	@include('components/menu.html')
+	<main class="main">
+		@include('components/header.html')
+		<div class="main__body">
+			@include('components/setting.html')
+		</div>
+	</main>
+
+	<script src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/script.min.js"></script>
+</body>
+
+</html>
